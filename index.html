@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>meetup.com/lua-devs</title>
+    <title>Busted 2.0</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -44,24 +44,64 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
-          <h1>Lua Devs</h1>
-          <h4>Hosted by <span class='ol'>Olivine Labs</span> &amp; <span class='forio'>Forio</span></h4>
+          <h1>Busted 2.0</h1>
           <h3>
-            Presented by Jack &amp; Drew
+            olivinelabs.com/busted
           </h3>
-          <h4>(
-            <i class="fa fa-github"></i><i class="fa fa-twitter"></i> ajacksified
-            &amp;
-            <i class="fa fa-github"></i> doriangray
-          )</h4>
+          <h3>
+            github.com/Olivine-Labs/busted
+          </h3>
+        </section>
 
-          <hr>
+        <section>
+          <h2>"Elegant Lua unit testing."</h2>
+        </section>
 
-          <p>
-            Wifi: <strong>forio-guest / forioguest</strong>
-            <br>
-            IRC: <strong>irc.freenode.net #lua #bald</strong>
-          </p>
+        <section data-markdown>
+          <script type="text/template">
+```lua
+describe('busted', function()
+  it('should have a simple api', function()
+    local str = 'yup'
+    assert.are.equal('yup', str)
+  end)
+)
+```
+          </script>
+        </section>
+
+        <section>
+          <img src='img/utf_output.png' width="100%">
+        </section>
+
+        <section>
+          <h2><a href="https://github.com/Olivine-Labs/busted/blob/61f98594a260236ffab7e3c7ce7aefdf293ce18e/busted.lua" target="_blank">In The Beginning</a>, Busted was very simple.</h2>
+        </section>
+
+        <section>
+          <h2>We made changes and received some <a href="https://github.com/Olivine-Labs/busted/pulls?direction=desc&page=1&sort=created&state=closed" target="_blank">pull requests.</a></h2>
+        </section>
+
+        <section>
+          <h2>So now Busted <a href="http://olivinelabs.com/busted/" target="_blank">has all these features...</a></h2>
+        </section>
+
+        <section>
+          <h2>And the codebase <a href="https://github.com/Olivine-Labs/busted/tree/v1.11.0" target="_blank">looks like this.</a></h2>
+        </section>
+
+        <section>
+          <h3>Time to clean up busted, implement plugins, and decentralize code.</h3>
+          <h2><a href="http://olivinelabs.com/mediator_lua" target="_blank">mediator_lua to the rescue!</a></h2>
+        </section>
+
+        <section>
+          <h2>Busted looks like <a href="https://github.com/Olivine-Labs/busted/tree/busted-v2" target="_blank">more like this now.</a></h2>
+        </section>
+
+        <section>
+          <h2><a href="http://github.com/Olivine-Labs/busted" target="_blank">github/Olivine-Labs/busted</a> @ busted-v2</h2>
+          <h3>Try it out and tell us what you think.</h3>
         </section>
       </div>
     </div>
@@ -79,11 +119,11 @@
         history: true,
         center: true,
 
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
         // Parallax scrolling
-        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-        // parallaxBackgroundSize: '2100px 900px',
+         parallaxBackgroundImage: 'img/field.jpg',
+         parallaxBackgroundSize: '2631px 1753px',
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
